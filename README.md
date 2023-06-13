@@ -3,7 +3,7 @@
 ## How to execute the app?
 
 #### Step 1
-`git clone`
+`git clone https://github.com/Luizrebelatto/z1tech.git`
 
 #### Step 2
 `cd z1tech`
