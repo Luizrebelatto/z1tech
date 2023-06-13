@@ -1,27 +1,22 @@
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, ImageBackground } from 'react-native';
-import AMANAH from './src/assets/Amanah_audrey.svg';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import Onboarding from './src/screens/Onboarding';
+import OnboardingTwo from './src/screens/OnboardingTwo';
+import OnboardingThree from './src/screens/OnboardingThree';
+
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <ImageBackground source={require('./src/assets/background.png')} resizeMode="cover" style={styles.image}>
-      <StatusBar style="auto" />
-      <View style={{justifyContent: 'center', alignItems: 'center'}}>
-        <AMANAH width={220} height={80}/>
-      </View>
-      </ImageBackground>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Onboarding" component={Onboarding} options={{ headerShown: false }}/>
+        <Stack.Screen name="OnboardingTwo" component={OnboardingTwo} options={{ headerShown: false }}/>
+        <Stack.Screen name="OnboardingThree" component={OnboardingThree} options={{ headerShown: false }}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  image: {
-    flex: 1,
-    justifyContent: 'center'
-  }
-});
