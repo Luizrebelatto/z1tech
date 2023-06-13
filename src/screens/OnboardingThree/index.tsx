@@ -27,7 +27,7 @@ export default function OnboardingThree() {
           source={require('../../assets/sliderthree.png')}
           style={{ width: 61, height: 12, marginTop: 31 }}
         />
-        <TouchableOpacity style={styles.button} activeOpacity={0.8} onPress={() => navigation.navigate('Onboarding' as never)}>
+        <TouchableOpacity style={styles.button} activeOpacity={0.8} onPress={() => navigation.navigate('ChoseLanguage' as never)}>
           <AntDesign name="arrowright" size={40} color="white" />
         </TouchableOpacity>
       </View>
